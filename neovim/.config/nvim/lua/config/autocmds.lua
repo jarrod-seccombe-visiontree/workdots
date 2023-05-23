@@ -5,5 +5,9 @@ vim.api.nvim_create_autocmd('BufWritePre', {
         '*.tsx',
         '*.jsx',
     },
+    callback = function()
+        require('lint').try_lint()
+        vim.cmd([FormatWrite])
+    end
     command = 'EslintFixAll',
 })
