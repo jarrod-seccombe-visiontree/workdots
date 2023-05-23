@@ -17,6 +17,4 @@ return {
             numhl = false,
         },
     },
-    -- TODO: may not need this
-    { 'tpope/vim-fugitive' },
 }
