@@ -5,26 +5,6 @@ return {
         opts = {
             theme = 'catppuccin',
             ignore_focus = { 'NvimTree' },
-            winbar = {
-                lualine_a = {},
-                lualine_b = {},
-                lualine_c = {
-                    { 'filename', path = 1 },
-                },
-                lualine_x = {},
-                lualine_y = {},
-                lualine_z = {},
-            },
-            inactive_winbar = {
-                lualine_a = {},
-                lualine_b = {},
-                lualine_c = {
-                    { 'filename', path = 1 },
-                },
-                lualine_x = {},
-                lualine_y = {},
-                lualine_z = {},
-            },
         },
     },
     {
@@ -55,6 +35,17 @@ return {
         event = 'BufEnter',
         config = function()
             require('fidget').setup()
+        end
+    },
+    {
+        'utilyre/barbecue.nvim',
+        name = 'barbecue',
+        dependencies = {
+            'SmiteshP/nvim-navic',
+            'nvim-tree/nvim-web-devicons'
+        },
+        config = function()
+            require('barbecue').setup()
         end
     }
 }
