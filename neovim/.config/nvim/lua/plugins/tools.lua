@@ -46,5 +46,6 @@ return {
                 lua = { 'luacheck' }
             }
         end
-    }
+    },
+    { 'tpope/vim-fugitive' }
 }
