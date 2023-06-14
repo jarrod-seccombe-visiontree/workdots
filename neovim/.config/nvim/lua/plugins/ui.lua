@@ -49,5 +49,19 @@ return {
                 theme = 'catppuccin'
             })
         end
+    },
+    {
+        'lewis6991/hover.nvim',
+        config = function()
+            require('hover').setup({
+                init = function()
+                    require('hover.providers.lsp')
+                end,
+                title = true
+            })
+
+            vim.keymap.set('n', 'K', require('hover').hover, { desc = 'Hover' })
+            vim.keymap.set('n', 'gK', require('hover').hover_select, { desc = 'Hover Select' })
+        end
     }
 }
