@@ -45,7 +45,9 @@ return {
             'nvim-tree/nvim-web-devicons'
         },
         config = function()
-            require('barbecue').setup()
+            require('barbecue').setup({
+                theme = 'catppuccin'
+            })
         end
     }
 }
