@@ -2,7 +2,7 @@ alias vim=nvim
 export EDITOR='vim'
 
 export DISABLE_AUTO_TITLE=true
-export PATH=/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/sbin:/Users/jsec/Applications
+PATH=/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/sbin:/Users/jsec/Applications
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --color=never --glob "!{.git,node_modules,bin}"'
 export BAT_THEME="Nord"
 
@@ -19,8 +19,11 @@ eval "$(starship init zsh)"
 
 # Go
 export GOPATH=/Users/jsec/src/go
-export PATH="$GOPATH/bin:$PATH"
+PATH="$GOPATH/bin:$PATH"
 
 # Volta
 export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+PATH="$VOLTA_HOME/bin:$PATH"
+
+# psql
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
