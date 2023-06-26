@@ -27,3 +27,7 @@ PATH="$VOLTA_HOME/bin:$PATH"
 
 # psql
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Autocomplete git branches
+autoload -Uz compinit
+compinit
