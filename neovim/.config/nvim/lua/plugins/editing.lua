@@ -42,6 +42,7 @@ return {
         dependencies = {
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-nvim-lsp-signature-help',
             'saadparwaiz1/cmp_luasnip',
             'L3MON4D3/LuaSnip',
             'onsails/lspkind-nvim',
@@ -111,6 +112,7 @@ return {
                     { name = 'nvim_lsp' },
                     { name = 'luasnip' },
                     { name = 'buffer' },
+                    { name = 'nvim_lsp_signature_help' }
                 },
             })
 
