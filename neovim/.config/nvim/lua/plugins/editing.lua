@@ -61,6 +61,13 @@ return {
                 completion = {
                     completeopt = 'menu,menuone,noinsert',
                 },
+                confirmation = {
+                    get_commit_characters = function(commit_characters)
+                        return vim.tbl_filter(function(char)
+                            return char ~= ','
+                        end, commit_characters)
+                    end
+                },
                 formatting = {
                     format = lspkind.cmp_format({
                         with_text = true,
@@ -111,8 +118,7 @@ return {
                 sources = {
                     { name = 'nvim_lsp' },
                     { name = 'luasnip' },
-                    { name = 'buffer' },
-                    { name = 'nvim_lsp_signature_help' }
+                    { name = 'buffer' }
                 },
             })
 

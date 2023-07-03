@@ -44,7 +44,7 @@ return {
             lspconfig.vtsls.setup({
                 on_attach = on_attach,
                 capabilities = capabilities,
-                root_dir = lspconfig.util.root_pattern('tsconfig.json', '.git'),
+                root_dir = lspconfig.util.root_pattern('package.json', 'tsconfig.json', '.git'),
                 settings = {
                     format = { enable = false },
                 },
