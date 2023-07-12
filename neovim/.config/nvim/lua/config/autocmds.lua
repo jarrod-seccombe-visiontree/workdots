@@ -9,5 +9,4 @@ vim.api.nvim_create_autocmd('BufWritePre', {
         require('lint').try_lint()
         vim.cmd([FormatWrite])
     end
-    command = 'EslintFixAll',
 })
