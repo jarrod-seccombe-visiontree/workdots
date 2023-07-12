@@ -3,13 +3,14 @@ export EDITOR='vim'
 
 export DISABLE_AUTO_TITLE=true
 PATH=/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/usr/sbin:/sbin:/Users/jsec/Applications
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --color=never --glob "!{.git,node_modules,bin}"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --color=never --glob "!{.git,node_modules,bin,Library}"'
 export BAT_THEME="Nord"
 
 # Support coloring in ls commands without the use of a framework
 export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 alias ll="ls -alG"
+alias lsize="du -hs * | gsort -h"
 
 # Bootstrap homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
@@ -31,3 +32,4 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # Autocomplete git branches
 autoload -Uz compinit
 compinit
+
